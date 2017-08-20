@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "test": "mocha"
   },
@@ -18,6 +21,10 @@
   "homepage": "https://github.com/domgarr/job-posting-website#readme",
   "devDependencies": {
     "chai": "^4.1.1",
-    "mocha": "^3.5.0"
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "jsdom": "^11.1.0",
+    "mocha": "^3.5.0",
+    "mocha-jsdom": "^1.1.0"
   }
 }

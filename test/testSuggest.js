@@ -11,13 +11,13 @@
 
    	var suggest = require("../js/suggest");
 
- 	
-	 beforeEach(function (done) {
+ 	/*
+	 before(function () {
 	    setTimeout(function(){
-	      done();
-	    }, 1500);
+	   
+	  	    }, 999);
 	  });	
-
+*/
 
 
 	describe("Suggest", function(){
@@ -28,6 +28,10 @@
 
 			it("When an empty string is entered, and empty string is returned", function(){
 				assert.equal(suggest.getSuggestion(""), "");
+			})
+
+			it("When multiple spaces are given an emptry string should be returned", function(){
+				assert.equal(suggest.getSuggestion("  "), "");
 			})
 	});
 

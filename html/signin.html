@@ -24,28 +24,6 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
 	<script src="../js/suggest.js"> </script>
-
-	<style>
-	.ui-autocomplete 
-	{
-	
-	width: auto;
-	}
-
-	 .ui-menu {
-		padding:5px;
-		font-size: 20px;
-		border-style: ;
-	}
-
-.ui-select-choices {
-        position: fixed;
-        top: auto;
-        left: auto;
-        width: inherit;
-      }
-
-	</style>
 </head>
 
 <body class = "container">
@@ -68,25 +46,19 @@
 		<h1 class="display-3"> Job Hunter </h1>
 		<p class="lead"> Let us hunt you down a job! </p>
 		<hr class="my-4">
-		<a class="btn btn-success btn-lg" href="#" role="button">Sign Up</a>
-	
-		<hr class = "my-4">
-	
-		<div class="input-group">
-		  <span class="input-group-addon" id="basic-addon1">city</span>
-		  <input type="text" class="form-control" id = "city-input" placeholder="windsor" aria-label="Username" aria-describedby="basic-addon1">
-
-		</div>
-		<br>
-		<div class="input-group">
-		  <span class="input-group-addon" id="basic-addon1">occupation</span>
-		  <input type="text" class="form-control" placeholder="junior web developer" aria-label="Username" aria-describedby="basic-addon1" list="suggestion-list">
-		</div>
+		<form action="http://garreffd.myweb.cs.uwindsor.ca/60334/job-posting-website/html/signin.php" method="post" role="form">
+		<div class = "form-group">
+				<label for="email-input"> Email address </label>
+				<input type ="email" class= "form-control" id="email-input" name="email"  placeholder="garreffd@uwindsor.ca">
+			</div>
+			<div class = "form-group">
+				<label for="password-input"> Password </label>
+				<input type ="password" class="form-control" id="password-input" placeholder = "password" name="password">
+			</div>
 		
-
 		<br>
 		<div>
-			<button type="button" class="btn btn-success">Search</button>
+			<button type="submit" class="btn btn-success btn-block">Sign In</button>
 		</div>
 
 	</div>

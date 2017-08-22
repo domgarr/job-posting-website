@@ -50,44 +50,49 @@
 
 <body class = "container">
 	<div class = "jumbotron">
-		<ul class="nav nav-tabs nav-fill">
-		  <li class="nav-item">
-		    <a class="nav-link active" href="#">Search</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="#">Post</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="#">Analytics</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link success" href="#">Sign In</a>
-		  </li>
-		</ul>
-		<br>
+		<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Search</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Post</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Analytics</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link success" href="#">Sign In</a>
+  </li>
+</ul>
+
+
 		<h1 class="display-3"> Job Hunter </h1>
-		<p class="lead"> Let us hunt you down a job! </p>
+		<p class="lead"> Let the hunt for you future begin! </p>
 		<hr class="my-4">
-		<a class="btn btn-success btn-lg" href="#" role="button">Sign Up</a>
-	
-		<hr class = "my-4">
-	
-		<div class="input-group">
-		  <span class="input-group-addon" id="basic-addon1">city</span>
-		  <input type="text" class="form-control" id = "city-input" placeholder="windsor" aria-label="Username" aria-describedby="basic-addon1">
-
-		</div>
-		<br>
-		<div class="input-group">
-		  <span class="input-group-addon" id="basic-addon1">occupation</span>
-		  <input type="text" class="form-control" placeholder="junior web developer" aria-label="Username" aria-describedby="basic-addon1" list="suggestion-list">
-		</div>
 		
+		<form action="http://garreffd.myweb.cs.uwindsor.ca/60334/job-posting-website/html/addUser.php" method="post" role="form"> 
+			<div class = "form-group">
+				<label for="email-input"> Email address </label>
+				<input type ="email" class= "form-control" id="email-input" name="email"  placeholder="garreffd@uwindsor.ca">
+				<small>Your email will be your username. </small>
+			</div>
+			<div class = "form-group">
+				<label for="password-input"> Password </label>
+				<input type ="password" class="form-control" id="password-input" placeholder = "password" name="password">
+			</div>
 
-		<br>
-		<div>
-			<button type="button" class="btn btn-success">Search</button>
-		</div>
+			 <div class="form-group">
+			    <label for="user-type-input"> What are you? </label>
+			    <select class="form-control" id="user-type-input" name="userType">
+			      <option value="1">Candidate</option>
+			      <option value="2">Employer</option>
+			    </select>
+  			</div>
+
+			<input type="submit" class="btn btn-success" value = "Create Account">
+			
+		</form>
+		
 
 	</div>
 

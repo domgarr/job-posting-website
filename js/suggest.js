@@ -15,6 +15,7 @@
 	cacheDom : function(){
 		this.$cityInput = $("#city-input");
 		this.$cityInputUserEnteredString = this.$cityInput.val();
+               
 	},
 	render: function(){
 		this.$cityInput.autocomplete({
@@ -40,11 +41,11 @@
 			url: this.path + string,
  			type: "GET",
  			success: function (response) {
-		    	suggestion.push(response);
+console.log(response);		    	
+suggestion.push(response);
 		    },
-		    async: false
+		    async: true
 		});
-		console.log(suggestion);
 		return suggestion;
 	    /*
 	    //For production.

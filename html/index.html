@@ -23,53 +23,34 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
-	<script src="../js/suggest.js"> </script>
-    <script src="../js/index.js"> </script>
-	<style>
-	.ui-autocomplete 
-	{
-	
-	width: auto;
-	}
-
-	 .ui-menu {
-		padding:5px;
-		font-size: 20px;
-		border-style: ;
-	}
-
-.ui-select-choices {
-        position: fixed;
-        top: auto;
-        left: auto;
-        width: inherit;
-      }
-
-	</style>
+	<script src="../js/suggest.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/post.js"></script>
 </head>
 
 <body class = "container">
 	<div class = "jumbotron">
 		<ul class="nav nav-tabs nav-fill">
-		  <li class="nav-item">
+		  <li class="nav-item" id ="search-nav">
 		    <a class="nav-link active" href="#">Search</a>
 		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="#">Post</a>
+		  <li class="nav-item" id="post-nav" >
+		    <a class="nav-link" href="post.html">Post</a>
 		  </li>
 		  <li class="nav-item">
 		    <a class="nav-link" href="#">Analytics</a>
 		  </li>
 		  <li class="nav-item" id = "sign-in-nav">
-		    <a class="nav-link" href="#">Sign In</a>
+		    <a class="nav-link" href="signin.html">Sign In</a>
 		  </li>
 		</ul>
 		<br>
 		<h1 class="display-3"> Job Hunter </h1>
 		<p class="lead"> Let us hunt you down a job! </p>
-		<hr class="my-4">
-		<a class="btn btn-success btn-lg" href="#" role="button">Sign Up</a>
-	
+		<div id ="sign-up-button">
+                <hr class="my-4">
+		<a class="btn btn-success btn-lg" href="signup.html" role="button">Sign Up</a>
+	        </div>
 		<hr class = "my-4">
 	
 		<div class="input-group">
@@ -89,9 +70,12 @@
 			<button type="button" class="btn btn-success">Search</button>
 		</div>
 
+    <br>
+
+    <div id = "job-postings">
+		
+		
 	</div>
-
-
 </body>
 
 </html>

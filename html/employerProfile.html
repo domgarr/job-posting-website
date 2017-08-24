@@ -23,6 +23,10 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
+	<script src="../js/suggest.js"> </script>
+    <script src="../js/index.js"> </script>
+	
+	
 </head>
 
 <body class = "container">
@@ -32,33 +36,49 @@
 		    <a class="nav-link" href="index.html">Search</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link" href="#">Post</a>
+		    <a class="nav-link active" href="#">Post</a>
 		  </li>
 		  <li class="nav-item">
 		    <a class="nav-link" href="#">Analytics</a>
 		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link active" href="#">Sign In</a>
+		  <li class="nav-item" id = "sign-in-nav">
+		    <a class="nav-link" href="#">Sign In</a>
 		  </li>
 		</ul>
 		<br>
 		<h1 class="display-3"> Job Hunter </h1>
 		<p class="lead"> Let us hunt you down a job! </p>
-		<hr class="my-4">
-		<form action="http://garreffd.myweb.cs.uwindsor.ca/60334/job-posting-website/html/signin.php" method="post" role="form">
-		<div class = "form-group">
-				<label for="email-input"> Email address </label>
-				<input type ="email" class= "form-control" id="email-input" name="email"  placeholder="garreffd@uwindsor.ca">
-			</div>
-			<div class = "form-group">
-				<label for="password-input"> Password </label>
-				<input type ="password" class="form-control" id="password-input" placeholder = "password" name="password">
-			</div>
 		
+		
+	
+		<hr class = "my-4">
+		<div class="container">
+			<form action="http://garreffd.myweb.cs.uwindsor.ca/60334/job-posting-website/html/updateEmployerProfile.php" method="POST">
+				<div class="form-group ">
+	      			<label for="inputEmail3" class=" col-form-label">Company Name</label>
+	        		<input type="text" name="name" class="form-control" id="inputEmail3" placeholder="Riot Games" >
+		      	</div>
+
+		      	 <div class="form-group">
+			    <label for="exampleInputEmail1">Location of company</label>
+			    <input type="text" name = "location" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Windsor, Ontario" maxlength="10">
+		  	</div>
+		
+
+		      	<div class="form-group">
+			    <label for="exampleTextarea">Company Description</label>
+			    <textarea name = "description" class="form-control" id="exampleTextarea" rows="3" placeholder="We are the largest MOBA in the market!" maxlength="500"></textarea>
+				</div>
+				
+		  	<div>
+			<button type="submit" class="btn btn-success btn-block"> Continue </button>
+			</div>
+
+		</form>
+		
+
 		<br>
-		<div>
-			<button type="submit" class="btn btn-success btn-block">Sign In</button>
-		</div>
+		
 
 	</div>
 
